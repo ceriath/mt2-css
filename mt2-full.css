@@ -40,6 +40,11 @@
     line-height: 22px !important;	
 }
 
+.chat-line-mod-button {
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
 /** alca's chat pause indicator 
 https://gist.github.com/AlcaDesign/29d62eceece04ef9a3e3f03c6f73d658#file-pause-indicator-css
 */
