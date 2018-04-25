@@ -40,6 +40,8 @@
     line-height: 22px !important;	
 }
 
+/** padding between mod icons */
+
 .chat-line-mod-button {
 	padding-left: 4px;
 	padding-right: 4px;
