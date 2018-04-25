@@ -21,8 +21,8 @@
 
 .chat-line-wrapper.system-msg .chat-line-text,
 .chat-line-wrapper.system-msg .chat-line-time{
-    font-style: italic;
-    color: #838383;
+    font-style: italic !important;
+    color: #838383 !important;
 }
 
 /** decrease size of autocomplete list */
