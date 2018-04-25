@@ -1,0 +1,149 @@
+/**
+*
+* Custom CSS for modch.at
+*
+*/
+
+/** import lato */
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+/** set lato */
+.chat-wrapper {
+    font-family: 'Lato', sans-serif !important;
+}
+
+/** remove strikethroughs on timeouts */
+.chat-line-wrapper.chat-line-deleted .chat-line-text{
+    text-decoration: none !important;
+}
+
+/** fix message style for own mod actions */
+
+.chat-line-wrapper.system-msg .chat-line-text,
+.chat-line-wrapper.system-msg .chat-line-time{
+    font-style: italic;
+    color: #838383;
+}
+
+/** decrease size of autocomplete list */
+
+.md-panel.autocomplete-panel .autocomplete-panel-content .md-button,
+.md-panel.autocomplete-panel .autocomplete-panel-content ._md-button-wrap,
+.md-panel.autocomplete-panel .autocomplete-panel-content ._md-button-wrap .md-list-item:before,
+.md-panel.autocomplete-panel .autocomplete-panel-content ._md-button-wrap .md-list-item-inner:before{
+    font-size: 9pt !important;
+    max-height: 22px !important;
+    min-height: 10px !important;
+}
+
+.md-panel.autocomplete-panel .autocomplete-panel-content .md-button{
+    line-height: 22px !important;	
+}
+
+/** alca's chat pause indicator 
+https://gist.github.com/AlcaDesign/29d62eceece04ef9a3e3f03c6f73d658#file-pause-indicator-css
+*/
+
+.chat-paused-indicator {
+	animation: 300ms chat-paused-indicator-show;
+	overflow: hidden;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	right: 0px;
+	left: 0px;
+	width: auto !important;
+	padding-left: 6px !important;
+}
+
+.chat-paused-indicator:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(
+			-62.5deg,
+			hsla(0, 0%, 50%, 0.0) 45%,
+			hsla(0, 0%, 50%, 0.25) 50%,
+			hsla(0, 0%, 50%, 0.0) 55%
+		);
+	background-size: 300%;
+	animation: 2s grade-swipe infinite linear;
+}
+
+.chat-paused-indicator.ng-hide {
+	display: block !important;
+	animation: 300ms chat-paused-indicator-hide;
+	bottom: -25px;
+}
+
+.chat-line-mod-button-label {
+	display: inline-block;
+	width: 16px;
+}
+
+@keyframes chat-paused-indicator-show {
+	from {
+		bottom: -25px;
+	}
+	to {
+		bottom: 0px;
+	}
+}
+
+@keyframes chat-paused-indicator-hide {
+	from {
+		opacity: 1;
+		bottom: 0px;
+	}
+	50% {
+		opacity: 0;
+	}
+	to {
+		bottom: -25px;
+	}
+}
+
+@keyframes grade-swipe {
+	from {
+		background-position: 100%;
+	}
+	to {
+		background-position: 0%;
+	}
+}
+
+/** Alca's Emote menu 
+https://gist.github.com/AlcaDesign/29d62eceece04ef9a3e3f03c6f73d658#file-emote-menu-css
+*/
+body.theme-dark .emote-menu {
+	padding: 0;
+	background-color: hsla(0, 0%, 25%, 0.95);
+	height: 60%;
+	width: auto;
+	left: 10px;
+	right: 10px;
+	bottom: calc(4em + 10px);
+}
+
+.emote-search {
+	position: relative;
+	top: 18px;
+}
+
+.emote-menu-list {
+	background-color: hsla(0, 0%, 16%, 0.6);
+	padding: 4px;
+}
+
+.emote-menu-list > div {
+	min-width: 28px;
+	max-width: 56px;
+	padding: 2px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
