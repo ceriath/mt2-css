@@ -19,6 +19,7 @@
 
 /** fix message style for own mod actions */
 
+.chat-line-wrapper.system-msg,
 .chat-line-wrapper.system-msg .chat-line-text,
 .chat-line-wrapper.system-msg .chat-line-time{
     font-style: italic !important;
